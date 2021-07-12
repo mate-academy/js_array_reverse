@@ -37,4 +37,16 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['asd1 de', 'sd2 !']))
       .toEqual(['! 2dsed', ' 1dsa']);
   });
+
+  it(`should return string if original
+  array consists of 2 elements with digits`, () => {
+    expect(arrayReverse(['1334', '6923']))
+      .toEqual(['3296', '4331']);
+  });
+
+  it(`should return string if original
+  array consists of 2 elements with special characters`, () => {
+    expect(arrayReverse(['!@#$%', '^&*(']))
+      .toEqual(['(*&^%', '$#@!']);
+  });
 });
