@@ -17,9 +17,7 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return an array of strings 
-  staying the same length as in the inputted array but being reversed
-    Example: 
-    ['I', 'am', 'a', 'student!'] --> ['!', 'tn', 'e', 'dutsamaI'] `, () => {
+  staying the same length as in the inputted array but being reversed`, () => {
     // eslint-disable-next-line
     expect(arrayReverse(['I', 'am', 'a', 'student!'])).toEqual(['!', 'tn', 'e', 'dutsamaI']);
   });
