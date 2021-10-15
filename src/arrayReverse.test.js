@@ -30,5 +30,17 @@ describe(`Function 'arrayReverse':`, () => {
       .toEqual(['!', 'tn', 'e', 'dutsamaI']);
   });
 
+  it(`should accept numbers`, () => {
+    expect(arrayReverse(['1234', '5678'])).toEqual(['8765', '4321']);
+  });
+
+  it(`should accept special symbols`, () => {
+    expect(arrayReverse(['~><}', '¬&*%'])).toEqual(['%*&¬', '}<>~']);
+  });
+
+  it(`should accept Latin letters`, () => {
+    expect(arrayReverse(['hello'])).toEqual(['olleh']);
+  });
+
   // write more tests here
 });
