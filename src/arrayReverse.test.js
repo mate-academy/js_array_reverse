@@ -26,11 +26,6 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['deed', 'peep'])).toEqual(['peep', 'deed']);
   });
 
-  it(`should return an empty string
-    if original array is numberic`, () => {
-    expect(arrayReverse([1234, 5678])).toEqual(['', '']);
-  });
-
   it(`should return an reverse string
     if original array is numberic`, () => {
     expect(arrayReverse(['1234', '5678'])).toEqual(['8765', '4321']);
@@ -42,7 +37,7 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return an case sensetive reversed array
-    if original array is in Lower or Higher case`, () => {
+    if original array is in Lower or Upper case`, () => {
     expect(arrayReverse(['Abcd', 'Defg'])).toEqual(['gfeD', 'dcbA']);
   });
 });
