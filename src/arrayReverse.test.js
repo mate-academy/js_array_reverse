@@ -22,10 +22,8 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  it(`if the length of the first string is 1, 
-  and the length of the last is 8,
-  then when reversing, the first string in the array will contain
-  only the last character from the last string`, () => {
+  it(`should return ['!', 'tn', 'e', 'dutsamaI'],
+  if array is ['I', 'am', 'a', 'student!']`, () => {
     expect(arrayReverse(['I', 'am', 'a', 'student!']))
       .toEqual(['!', 'tn', 'e', 'dutsamaI']);
   });
