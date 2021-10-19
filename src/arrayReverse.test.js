@@ -28,7 +28,7 @@ describe(`Function 'arrayReverse':`, () => {
       .toEqual(['!', 'tn', 'e', 'dutsamaI']);
   });
 
-  it(`should accept numbers`, () => {
+  it(`should reverse numbers in string`, () => {
     expect(arrayReverse(['1234', '5678'])).toEqual(['8765', '4321']);
   });
 
