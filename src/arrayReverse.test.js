@@ -3,18 +3,15 @@
 describe(`Function 'arrayReverse':`, () => {
   const arrayReverse = require('./arrayReverse');
 
-  it(`should be declared`, () => {
-    expect(arrayReverse).toBeInstanceOf(Function);
-  });
-
-  it(`should return an array`, () => {
-
-  });
-
-  it(`should return an empty string
+  test(`Function should return an empty string
     if original array consists of an empty string`, () => {
-    expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
+    expect(arrayReverse(['']))
+      .toEqual(['']);
   });
 
-  // write more tests here
+  test(`Function should return reversed string
+    if original array consists of a valid chars`, () => {
+    expect(arrayReverse(['What', 'c0l0r', '1s', 'a', 'carr0t', '?']))
+      .toEqual(['?t0r', 'racas', '1r', '0', 'l0ctah', 'W']);
+  });
 });
