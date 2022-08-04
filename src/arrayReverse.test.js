@@ -20,6 +20,15 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['Mate'])).toEqual(['etaM']);
   });
 
+  it(`should reverse the string`, () => {
+    expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
+  });
+
+  it(`should return the string reversed in the correct way `, () => {
+    expect(arrayReverse(['I', 'am', 'a', 'student!']))
+      .toEqual(['!', 'tn', 'e', 'dutsamaI']);
+  });
+
   it(`should preserve the length of each word`, () => {
     const initialArrary = ['Mate', 'Academy'];
     const reversedArray = arrayReverse(initialArrary);
@@ -28,7 +37,7 @@ describe(`Function 'arrayReverse':`, () => {
     expect(initialArrary[1].length).toBe(reversedArray[1].length);
   });
 
-  it(`should return the same amount of the words`, () => {
+  it(`should return the same number of the words`, () => {
     const initialArrary = ['I', 'am', 'a', 'student!'];
     const reversedArray = arrayReverse(initialArrary);
 
