@@ -49,6 +49,6 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should work with the special symbols`, () => {
-    expect(arrayReverse(['!!!?'])).toEqual(['?!!!']);
+    expect(arrayReverse(['!!!!?'])).toEqual(['?!!!!']);
   });
 });
