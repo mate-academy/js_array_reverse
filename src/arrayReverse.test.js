@@ -36,7 +36,11 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['!@#$%'])).toEqual(['%$#@!']);
   });
 
-  it(`should catch error if user is used wrong data type`, () => {
+  it(`should catch error if user is used numeric data type`, () => {
     expect(() => arrayReverse(123)).toThrow();
+  });
+
+  it(`should catch error if user is used boolean data type`, () => {
+    expect(() => arrayReverse(true)).toThrow();
   });
 });
