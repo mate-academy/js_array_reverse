@@ -47,4 +47,16 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['She', 'is', 'more', 'beautiful', 'then', 'Tamara']))
       .toEqual(['ara', 'ma', 'Tneh', 'tlufituae', 'bero', 'msiehS']);
   });
+
+  it(`returns reversed numbers in dependence on initial item length
+  if array includes 2 items`, () => {
+    expect(arrayReverse(['132', '54']))
+      .toEqual(['452', '31']);
+  });
+
+  it(`returns reversed simbols in dependence on initial item length
+  if array includes 2 items`, () => {
+    expect(arrayReverse(['@#', '%$*^']))
+      .toEqual(['^*', '$%#@']);
+  });
 });
