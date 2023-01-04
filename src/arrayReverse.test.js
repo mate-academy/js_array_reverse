@@ -3,18 +3,33 @@
 describe(`Function 'arrayReverse':`, () => {
   const arrayReverse = require('./arrayReverse');
 
-  it(`should be declared`, () => {
-    expect(arrayReverse).toBeInstanceOf(Function);
+  it(`be declared`, () => {
+    expect(arrayReverse)
+      .toBeInstanceOf(Function);
   });
 
-  it(`should return an array`, () => {
-
+  it(`return an array`, () => {
+    expect(arrayReverse(['Mate', 'Academy']))
+      .toBeInstanceOf(Array);
   });
 
-  it(`should return an empty string
+  it(`reverse sinle string`, () => {
+    expect(arrayReverse(['Hell0']))
+      .toEqual(['0lleH']);
+  });
+
+  it(`return an empty string
     if original array consists of an empty string`, () => {
-    expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
+    expect(arrayReverse([''])).toEqual(['']);
   });
 
-  // write more tests here
+  it(`reverse with correct length`, () => {
+    expect(arrayReverse(['', 'am', 'a', 'student!']))
+      .toEqual(['', '!t', 'n', 'edutsama']);
+  });
+
+  it(`reverse with correct letters case`, () => {
+    expect(arrayReverse(['Mate', 'Academy']))
+      .toEqual(['ymed', 'acAetaM']);
+  });
 });
