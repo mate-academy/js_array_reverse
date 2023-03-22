@@ -1,4 +1,4 @@
-# QA: Array reverse ([uk](readme.uk.md))
+s# QA: Array reverse ([uk](readme.uk.md))
 
 Write tests for a function `arrayReverse` that accepts an array of strings `words` consists of Latin letters, numbers and special symbols.
 
