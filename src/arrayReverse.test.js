@@ -28,7 +28,8 @@ describe(`Function 'arrayReverse':`, () => {
 
   it(`should return an array with reversed strings`
   + ` and the same length of strings as the original array`, () => {
-    expect(arrayReverse(['Academy'])).toEqual(['ymedacA']);
+    expect(arrayReverse(['I', 'am', 'a', 'student!']))
+      .toEqual(['!', 'tn', 'e', 'dutsamaI']);
   });
 
   it(`should return an array with a length`
