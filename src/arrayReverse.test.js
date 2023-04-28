@@ -8,13 +8,33 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return an array`, () => {
-
+    expect(arrayReverse([])).toBeInstanceOf(Array);
   });
 
-  it(`should return an empty string
-    if original array consists of an empty string`, () => {
-    expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
+  it(`should return an empty array`
+    + ` if original array is empty`, () => {
+    expect(arrayReverse([])).toEqual([]);
   });
 
-  // write more tests here
+  it(`should return an array with empty string`
+    + ` if original array consists of an empty string`, () => {
+    expect(arrayReverse([''])).toEqual(['']);
+  });
+
+  it(`should return an array with reversed word`
+    + ` if original array consists one element`, () => {
+    expect(arrayReverse(['Academy'])).toEqual(['ymedacA']);
+  });
+
+  it(`should return an array with reversed strings`
+  + ` and the same length of strings as the original array`, () => {
+    expect(arrayReverse(['Academy'])).toEqual(['ymedacA']);
+  });
+
+  it(`should return an array with a length`
+  + ` equal to the length of the original array`, () => {
+    const result = arrayReverse(['I', 'am', 'a', 'student!']);
+
+    expect(result.length).toBe(4);
+  });
 });
