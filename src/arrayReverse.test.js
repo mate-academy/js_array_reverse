@@ -8,7 +8,7 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(arrayReverse(['asdasd'])).toBeInstanceOf(Array)
+    expect(arrayReverse(['asdasd'])).toBeInstanceOf(Array);
   });
 
   it(`should return an empty string
@@ -17,10 +17,11 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it('should reverse the given strings keeping the initial order', () => {
-    expect(arrayReverse(['I', 'am', 'a', 'student!'])).toEqual(['!', 'tn', 'e', 'dutsamaI'])
+    expect(arrayReverse(['I', 'am', 'a', 'student!']))
+      .toEqual(['!', 'tn', 'e', 'dutsamaI']);
   });
 
   it('should not change the initial length', () => {
-    expect(['Mate', 'Academy', 'is', 'the', 'best']).toHaveLength(5)
+    expect(arrayReverse(['Mate', 'Academy', 'is', 'the', 'best'])).toHaveLength(5);
   });
 });
