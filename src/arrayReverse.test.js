@@ -13,32 +13,15 @@ describe(`Function 'arrayReverse':`, () => {
 
   it(`should return an empty string
    if original array consists of an empty string`, () => {
-    expect(arrayReverse([])).toEqual([]);
+    expect(arrayReverse([''])).toEqual(['']);
   });
 
-  it(`should handle an array with an onechar word`, () => {
+  it(`should handle an array with one symbol`, () => {
     expect(arrayReverse(['h'])).toEqual(['h']);
   });
 
-  it(`should handle an array with a single word of chars`, () => {
-    expect(arrayReverse(['hello'])).toEqual(['olleh']);
-  });
-
-  it(`should handle an array with a single word of numbers`, () => {
-    expect(arrayReverse(['123'])).toEqual(['321']);
-  });
-
-  it(`should handle an array with a single word of special symbols`, () => {
-    expect(arrayReverse(['+-!'])).toEqual(['!-+']);
-  });
-
-  it(`should handle an array with a single word of chars and numbers`, () => {
-    expect(arrayReverse(['hell0'])).toEqual(['0lleh']);
-  });
-
-  it(`should handle an array with a single word of chars and special 
-   chars`, () => {
-    expect(arrayReverse(['hello!'])).toEqual(['!olleh']);
+  it(`should handle an array with a single word`, () => {
+    expect(arrayReverse(['hello1!'])).toEqual(['!1olleh']);
   });
 
   it(`should reverse the order of words with same length in the array`, () => {
