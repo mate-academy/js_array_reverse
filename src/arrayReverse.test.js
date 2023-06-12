@@ -35,7 +35,6 @@ describe(`Function 'arrayReverse':`, () => {
 
   it(`Should return an array with an inverted string`, () => {
     const result = arrayReverse(['Mate', 'Academy']);
-
     expect(result).toEqual(['ymed', 'acAetaM']);
   });
 });
