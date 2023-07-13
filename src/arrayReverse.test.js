@@ -11,7 +11,7 @@ describe('arrayReverse', () => {
     const words = ['hello', 'world'];
     const reversed = arrayReverse(words);
 
-    expect(reversed).toEqual(['world', 'hello']);
+    expect(reversed).toEqual(['dlrow', 'olleh']);
   });
 
   it(`should return an empty 
