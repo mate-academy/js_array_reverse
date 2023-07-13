@@ -4,7 +4,7 @@ describe('arrayReverse', () => {
   const arrayReverse = require('./arrayReverse');
 
   it('should be declared', () => {
-    expect(arrayReverse).tobeDefined();
+    expect(arrayReverse).toBeInstanceOf(Function);
   });
 
   it('should reverse the order of the words in the array', () => {
