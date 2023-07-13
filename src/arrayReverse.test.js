@@ -16,7 +16,7 @@ describe('arrayReverse', () => {
 
   it(`should return an empty 
 string if original array consists of an empty string`, () => {
-    const words = ['I am', ''];
+    const words = [''];
     const reversed = arrayReverse(words);
 
     expect(reversed).toEqual(['']);
