@@ -7,14 +7,14 @@ describe('arrayReverse', () => {
     expect(arrayReverse).toBeInstanceOf(Function);
   });
 
-  it('should reverse the order of the words in the array', () => {
+  it('hould reverse the order of the letters in each word in the array', () => {
     const words = ['hello', 'world'];
     const reversed = arrayReverse(words);
 
     expect(reversed).toEqual(['dlrow', 'olleh']);
   });
 
-  it(`should return an empty 
+  it(`should return an array with an empty 
 string if original array consists of an empty string`, () => {
     const words = [''];
     const reversed = arrayReverse(words);
