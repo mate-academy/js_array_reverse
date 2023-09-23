@@ -22,7 +22,7 @@ describe(`Function 'arrayReverse':`, () => {
     ).toEqual([4, 7]);
   });
 
-  it.skip(`should work properly empty strings`, () => {
+  it.skip(`should work properly with empty strings`, () => {
     expect(arrayReverse(['I', 'am', 'a', '', 'student!'])).toEqual([
       '!',
       '',
