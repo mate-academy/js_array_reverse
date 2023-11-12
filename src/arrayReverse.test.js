@@ -37,4 +37,8 @@ describe(`Function 'arrayReverse':`, () => {
   it(`should return an empty array if the input array is empty`, () => {
     expect(arrayReverse([])).toEqual([]);
   });
+
+  it(`shouldn't reverse strings with one letter`, () => {
+    expect(arrayReverse(['r'])).toEqual(['r']);
+  });
 });
