@@ -16,9 +16,15 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-    it(`should return an array with reversed strings and order`, () => {
+    it(`should return an array with reversed string`, () => {
     expect(arrayReverse(['Hell0'])).toEqual(['0lleH']);
+  });
+
+  it(`should return an array with reversed strings and order`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
+  });
+
+  it(`should return an array with reversed strings and order for multiple words`, () => {
     expect(arrayReverse(['I', 'am', 'a', 'student!'])).toEqual(['!', 'tn', 'e', 'dutsamaI']);
   });
 
