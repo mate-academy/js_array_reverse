@@ -16,5 +16,34 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  // write more tests here
+  it('should reverse a single string in the array', () => {
+    const result = arrayReverse(['Hell0']);
+    expect(result).to.deep.equal(['0lleH']);
+  });
+
+  it('should reverse strings with different lengths', () => {
+    const result = arrayReverse(['I', 'am', 'a', 'student!']);
+    expect(result).to.deep.equal(['!', 'tn', 'e', 'dutsamaI']);
+  });
+
+  it('should handle an empty array', () => {
+    const result = arrayReverse([]);
+    expect(result).to.deep.equal([]);
+  });
+
+  it('should handle an array with a single empty string', () => {
+    const result = arrayReverse(['']);
+    expect(result).to.deep.equal(['']);
+  });
+
+  it('should handle an array with multiple empty strings', () => {
+    const result = arrayReverse(['', '', '']);
+    expect(result).to.deep.equal(['', '', '']);
+  });
+
+  it('should handle special characters', () => {
+    const result = arrayReverse(['@#$', '!*&']);
+    expect(result).to.deep.equal(['&*!', '$#@']);
+    
+  });
 });
