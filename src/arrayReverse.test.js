@@ -10,7 +10,7 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(typeof resultExample).toEqual('object');
+    expect(Array.isArray(resultExample)).toBe(true);
   });
 
   it(`should return an empty string
