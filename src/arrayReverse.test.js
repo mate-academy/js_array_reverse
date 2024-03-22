@@ -36,4 +36,10 @@ describe(`Function 'arrayReverse':`, () => {
 
     expect(result).toEqual(['']);
   });
+
+  it('should reverse strings of different symbols', () => {
+    const result = arrayReverse(['abc', '123', '!@#']);
+
+    expect(result).toEqual(['#@!', '321', 'cba']);
+});
 });
