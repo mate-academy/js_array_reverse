@@ -8,13 +8,11 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return an array`, () => {
-    const result = arrayReverse(['']);
-
-    expect(result).toBeInstanceOf(Array);
+    expect(arrayReverse([''])).toBeInstanceOf(Array);
   });
 
-  it(`should return an empty string
-  if original array consists of an empty string`, () => {
+  it(`should return an empty string`
+    + `if original array consists of an empty string`, () => {
     expect(arrayReverse([''])).toEqual(['']);
   });
 
@@ -33,7 +31,7 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return the same length array with same`
-   + `length of elements with reversed 'chars'`, () => {
+    + `length of elements with reversed 'chars'`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 });
