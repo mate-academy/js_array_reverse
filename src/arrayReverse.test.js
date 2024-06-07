@@ -8,13 +8,20 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return an array`, () => {
-
+    expect(arrayReverse([])).toBeInstanceOf(Array);
   });
 
-  it(`should return an empty string
-    if original array consists of an empty string`, () => {
+ it(`reverse array with one word`, () => {
+    const name = ['Serhii'];
+    expect(arrayReverse(name)).toEqual(['iihreS']);
+  });
+
+  it(`reverse array with a few words`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  // write more tests here
+  it(`array with numbers and special symbols`, () => {
+    const words = ['123', '@!#'];
+    expect(arrayReverse(words)).toEqual(['#!@', '321']);
+  });
 });
