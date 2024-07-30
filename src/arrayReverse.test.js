@@ -33,8 +33,8 @@ it('should reverse words in 4-item array', () => {
 });
 
 it('should reverse words in 5-item array', () => {
-  expect(arrayReverse(['She', 'is', 'more', 'beautiful', 'then', 'Tamara']))
-    .toEqual(['ara', 'ma', 'Tneh', 'tlufituae', 'bero', 'msiehS']);
+  expect(arrayReverse(['Apple', 'Banana', 'Cherry', 'Date', 'Fig']))
+    .toEqual(['giFet', 'aDyrre', 'hCanan', 'aBel', 'ppA']);
 });
 
 it('should reverse numbers in 2-item array', () => {
