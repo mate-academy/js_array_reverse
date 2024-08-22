@@ -13,57 +13,81 @@ describe(`Function 'arrayReverse':`, () => {
 
   it('should return an empty string '
     + 'if original array consists of an empty string', () => {
-    expect(arrayReverse(['', '']))
-      .toEqual(['', '']);
+    const input = [''];
+    const expectedOutput = [''];
+
+    expect(arrayReverse(input))
+      .toEqual(expectedOutput);
   });
 
-  it('should correctly work with long strings', () => {
-    const StringArray = [
-      'a',
-      'bC',
-      'dEf',
-      'gHiJ',
-      'kLmNo',
-      'pQrStU',
-      'vWxYz',
-      'aBcD',
-      'eFg',
-      'hI',
-    ];
+  it('should return an empty array '
+    + 'for an empty input', () => {
+    const input = [];
+    const expectedOutput = [];
 
-    const ExpectedResult = [
-      'I',
-      'hg',
-      'FeD',
-      'cBaz',
-      'YxWvU',
-      'tSrQpo',
-      'NmLkJ',
-      'iHgf',
-      'EdC',
-      'ba',
-    ];
-
-    expect(arrayReverse(StringArray))
-      .toEqual(ExpectedResult);
+    expect(arrayReverse(input))
+      .toEqual(expectedOutput);
   });
 
-  it('should ignore empty strings', () => {
-    const StringArray = [
-      '',
-      'Abc',
-      'De',
-      '',
+  it('should reverse a single word', () => {
+    const input = ['testing'];
+    const expectedOutput = ['gnitset'];
+
+    expect(arrayReverse(input))
+      .toEqual(expectedOutput);
+  });
+
+  // --------------------------------------------------------------
+  it('should reverse long words', () => {
+    const input = ['qwertyuiopasdfghjklzxcvbnm',
+      'QWERTYUIOPASDFGHJKLZXCVBNM',
+    ];
+    const expectedOutput = ['MNBVCXZLKJHGFDSAPOIUYTREWQ',
+      'mnbvcxzlkjhgfdsapoiuytrewq',
     ];
 
-    const ExpectedResult = [
-      '',
-      'eDc',
-      'bA',
-      '',
-    ];
+    expect(arrayReverse(input))
+      .toEqual(expectedOutput);
+  });
 
-    expect(arrayReverse(StringArray))
-      .toEqual(ExpectedResult);
+  it('should reverse single-character words', () => {
+    const input = ['a', 'b', 'c', 'd'];
+    const expectedOutput = ['d', 'c', 'b', 'a'];
+
+    expect(arrayReverse(input))
+      .toEqual(expectedOutput);
+  });
+
+  it('should reverse non-empty words', () => {
+    const input = ['hello', 'world'];
+    const expectedOutput = ['dlrow', 'olleh'];
+
+    expect(arrayReverse(input))
+      .toEqual(expectedOutput);
+  });
+
+  it('should reverse a mix of empty and '
+      + 'non-empty words', () => {
+    const input = ['', 'hello', '', 'world', ''];
+    const expectedOutput = ['', 'dlrow', '', 'olleh', ''];
+
+    expect(arrayReverse(input))
+      .toEqual(expectedOutput);
+  });
+
+  it('should reverse mixed case words', () => {
+    const input = ['HelLo', 'wOrLd'];
+    const expectedOutput = ['dLrOw', 'oLleH'];
+
+    expect(arrayReverse(input))
+      .toEqual(expectedOutput);
+  });
+
+  it('should reverse words with special characters', () => {
+    const input = ['@bc', '12', '?!'];
+    const expectedOutput = ['!?2', '1c', 'b@'];
+
+    expect(arrayReverse(input))
+      .toEqual(expectedOutput);
   });
 });
