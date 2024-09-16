@@ -8,13 +8,26 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return an array`, () => {
-
+    expect(arrayReverse(['Test'])).toBeInstanceOf(Array);
   });
 
   it(`should return an empty string
     if original array consists of an empty string`, () => {
+    expect(arrayReverse([''])).toEqual(['']);
+  });
+
+  it(`should return an array with the same length of the 
+    strings from the original array`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  // write more tests here
+  it(`should return an array of reversed string 
+    when containing number and special symbols`, () => {
+    expect(arrayReverse(['newEmail', 'newemail@gmail.com']))
+      .toEqual(['moc.liam', 'g@liamewenliamEwen']);
+  });
+
+  it(`should return same count of strings as in origin array`, () => {
+    expect(arrayReverse(['cat', 'is', 'gone', '!']).length).toEqual(4);
+  });
 });
