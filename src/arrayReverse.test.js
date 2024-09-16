@@ -41,4 +41,12 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['a'.repeat(600), 'b'.repeat(1000)]))
       .toEqual(['b'.repeat(600), 'b'.repeat(400) + 'a'.repeat(600)]);
   });
+
+  it(`should return array of string if array contain one string on it`, () => {
+    expect(arrayReverse(['granary'])).toEqual(['yranarg']);
+  });
+
+  it(`should return array of string if array contain special symbols`, () => {
+    expect(arrayReverse(['!@#', '$%^'])).toEqual(['^%$', '#@!']);
+  });
 });
