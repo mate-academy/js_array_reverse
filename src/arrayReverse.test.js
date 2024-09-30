@@ -28,8 +28,8 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  it(`should return an inverted array preserving the length`
-    + `and order of the elements of the original array`, () => {
+  it(`should return an inverted array preserving the length and order of
+    elements including special characters from the original array`, () => {
     expect(arrayReverse(['I', 'am', 'a', 'student!']))
       .toEqual(['!', 'tn', 'e', 'dutsamaI']);
   });
