@@ -41,4 +41,24 @@ describe(`Function 'arrayReverse':`, () => {
     // eslint-disable-next-line max-len, no-undef
     expect(arrayReverse(['text', 123, null, true])).toEqual(['txet', 321, null, eurt]);
   });
+
+  // eslint-disable-next-line max-len
+  it(`should return an inverted array while ignoring non-string elements`, () => {
+    // eslint-disable-next-line max-len
+    expect(arrayReverse([123, true, null, undefined])).toEqual([321, true, null, undefined]);
+  });
+
+  it(`should handle null input and return an empty array`, () => {
+    expect(arrayReverse(null)).toEqual([]);
+  });
+
+  it(`should handle undefined input and return an empty array`, () => {
+    expect(arrayReverse(undefined)).toEqual([]);
+  });
+
+  // eslint-disable-next-line max-len
+  it(`should handle an array with mixed data types and reverse only reversible elements`, () => {
+    // eslint-disable-next-line max-len
+    expect(arrayReverse([123, 'hello', null, true, undefined])).toEqual([321, 'olleh', null, true, undefined]);
+  });
 });
