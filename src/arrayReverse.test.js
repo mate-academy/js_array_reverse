@@ -8,57 +8,39 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return an array`, () => {
-    const result = arrayReverse(['Hello', 'world!']);
+    const result = arrayReverse(['test']);
 
-    expect(result).toBeInstanceOf(Array);
+    expect(Array.isArray(result)).toBe(true);
   });
 
-  it(`should return an empty array if the original array is empty`, () => {
+  it(`should return an empty array when the input array is empty`, () => {
     expect(arrayReverse([])).toEqual([]);
   });
 
-  it(`should return an inverted array consisting of numbers`, () => {
-    expect(arrayReverse([123, 456])).toEqual([321, 654]);
+  it(`should return an array with empty strings`, () => {
+    expect(arrayReverse(['', ''])).toEqual(['', '']);
   });
 
-  // eslint-disable-next-line max-len
-  it(`should return an array where each element with special characters is reversed`, () => {
-    expect(arrayReverse(['hello@', 'world#'])).toEqual(['@olleh', '#dlrow']);
+  it(`should reverse a single word`, () => {
+    expect(arrayReverse(['Hello'])).toEqual(['olleH']);
   });
 
-  it(`should return an inverted string array with varying lengths`, () => {
-    // eslint-disable-next-line max-len
-    expect(arrayReverse(['a', 'bb', 'ccc', 'dddd'])).toEqual(['a', 'bb', 'ccc', 'dddd']);
+  it(`should handle an array with special characters`, () => {
+    expect(arrayReverse(['@test!', '#example$', '%special^']))
+      .toEqual(['^laice', 'ps%$elpma', 'xe#!tset@']);
   });
 
-  // eslint-disable-next-line max-len
-  it(`should return an inverted array preserving the length and order of elements including special characters`, () => {
-    // eslint-disable-next-line max-len
-    expect(arrayReverse(['I', 'am', 'a', 'student!'])).toEqual(['!', 'tn', 'e', 'dutsamaI']);
+  it(`should handle an array with 1 special symbol`, () => {
+    expect(arrayReverse(['string!', '@123', 'hi#']))
+      .toEqual(['#ih321@', '!gni', 'rts']);
   });
 
-  it(`should return an inverted array while handling mixed data types`, () => {
-    // eslint-disable-next-line max-len, no-undef
-    expect(arrayReverse(['text', 123, null, true])).toEqual(['txet', 321, null, eurt]);
+  it(`should return an array with reversed strings of varying lengths`, () => {
+    expect(arrayReverse(['short', 'longer', 'longest']))
+      .toEqual(['tsegn', 'olregn', 'oltrohs']);
   });
 
-  // eslint-disable-next-line max-len
-  it(`should return an inverted array while ignoring non-string elements`, () => {
-    // eslint-disable-next-line max-len
-    expect(arrayReverse([123, true, null, undefined])).toEqual([321, true, null, undefined]);
-  });
-
-  it(`should handle null input and return an empty array`, () => {
-    expect(arrayReverse(null)).toEqual([]);
-  });
-
-  it(`should handle undefined input and return an empty array`, () => {
-    expect(arrayReverse(undefined)).toEqual([]);
-  });
-
-  // eslint-disable-next-line max-len
-  it(`should handle an array with mixed data types and reverse only reversible elements`, () => {
-    // eslint-disable-next-line max-len
-    expect(arrayReverse([123, 'hello', null, true, undefined])).toEqual([321, 'olleh', null, true, undefined]);
+  it(`should handle an array with identical strings`, () => {
+    expect(arrayReverse(['abc', 'abc', 'abc'])).toEqual(['cba', 'cba', 'cba']);
   });
 });
