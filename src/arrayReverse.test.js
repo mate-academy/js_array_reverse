@@ -27,20 +27,34 @@ describe(`Function 'arrayReverse':`, () => {
 
   it(`should handle an array with special characters`, () => {
     expect(arrayReverse(['@test!', '#example$', '%special^']))
-      .toEqual(['^laice', 'ps%$elpma', 'xe#!tset@']);
+      .toEqual(['!tset@', '$elpmaxe#', '^laiceps%']);
   });
 
   it(`should handle an array with 1 special symbol`, () => {
     expect(arrayReverse(['string!', '@123', 'hi#']))
-      .toEqual(['#ih321@', '!gni', 'rts']);
+      .toEqual(['!gnirts', '321@', '#ih']);
   });
 
   it(`should return an array with reversed strings of varying lengths`, () => {
     expect(arrayReverse(['short', 'longer', 'longest']))
-      .toEqual(['tsegn', 'olregn', 'oltrohs']);
+      .toEqual(['trohs', 'regnol', 'tsegnol']);
   });
 
   it(`should handle an array with identical strings`, () => {
     expect(arrayReverse(['abc', 'abc', 'abc'])).toEqual(['cba', 'cba', 'cba']);
+  });
+
+  // eslint-disable-next-line max-len
+  it('should handle non-string and non-reversible elements without changes', () => {
+    expect(
+      arrayReverse([true, false, { key: 'value' }, ['array'], 123])
+    ).toEqual([true, false, { key: 'value' }, ['array'], 321]);
+  });
+
+  // eslint-disable-next-line max-len
+  it('should reverse elements with spaces while keeping spaces in the right positions', () => {
+    expect(
+      arrayReverse([' hello ', 'world'])
+    ).toEqual([' olleh ', 'dlrow']);
   });
 });
