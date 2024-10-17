@@ -1,26 +1,20 @@
 'use strict';
 
 /**
- * @param {Array} words
+ * @param {string[]} words
  *
- * @returns {Array}
+ * @returns {string[]}
  */
 function arrayReverse(words) {
-  if (!Array.isArray(words)) {
-    return [];
+  let start = 0;
+  const whole = words.join('').split('').reverse().join('');
+
+  for (let i = 0; i < words.length; i++) {
+    words[i] = whole.slice(start, start + words[i].length);
+    start += words[i].length;
   }
 
-  return words.map((el) => {
-    if (typeof el === 'string') {
-      return el.split('').reverse().join('');
-    }
-
-    if (typeof el === 'number') {
-      return parseInt(el.toString().split('').reverse().join(''), 10);
-    }
-
-    return el;
-  });
+  return words;
 }
 
 module.exports = arrayReverse;

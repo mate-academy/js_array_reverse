@@ -8,53 +8,37 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return an array`, () => {
-    const result = arrayReverse(['test']);
-
-    expect(Array.isArray(result)).toBe(true);
+    expect(arrayReverse([])).toBeInstanceOf(Array);
   });
 
-  it(`should return an empty array when the input array is empty`, () => {
-    expect(arrayReverse([])).toEqual([]);
+  it(`should return an empty string
+    if original array consists of an empty string`, () => {
+    expect(arrayReverse([''])).toEqual(['']);
   });
 
-  it(`should return an array with empty strings`, () => {
-    expect(arrayReverse(['', ''])).toEqual(['', '']);
+  it(`should return the reverse array from the input array`, () => {
+    expect(arrayReverse(['Bugy'])).toEqual(['yguB']);
   });
 
-  it(`should reverse a single word`, () => {
-    expect(arrayReverse(['Hello'])).toEqual(['olleH']);
+  it(`should return the reverse array from the input array which
+  consist from two different strings`, () => {
+    expect(arrayReverse(['Bugy', 'cockroach'])).toEqual(['hcao', 'rkcocyguB']);
   });
 
-  it(`should handle an array with special characters`, () => {
-    expect(arrayReverse(['@test!', '#example$', '%special^']))
-      .toEqual(['!tset@', '$elpmaxe#', '^laiceps%']);
+  it(`should return the reverse array from the input array which
+  consist from three different strings`, () => {
+    expect(arrayReverse(['Bugy', 'cockroach', 'worms']))
+      .toEqual(['smro', 'whcaorkco', 'cyguB']);
   });
 
-  it(`should handle an array with 1 special symbol`, () => {
-    expect(arrayReverse(['string!', '@123', 'hi#']))
-      .toEqual(['!gnirts', '321@', '#ih']);
+  it(`should return the reverse array from the input array which
+  consist from three different strings with different length`, () => {
+    expect(arrayReverse(['Bugy', 'is', 'a', 'cockroach']))
+      .toEqual(['hcao', 'rk', 'c', 'ocasiyguB']);
   });
 
-  it(`should return an array with reversed strings of varying lengths`, () => {
-    expect(arrayReverse(['short', 'longer', 'longest']))
-      .toEqual(['trohs', 'regnol', 'tsegnol']);
-  });
-
-  it(`should handle an array with identical strings`, () => {
-    expect(arrayReverse(['abc', 'abc', 'abc'])).toEqual(['cba', 'cba', 'cba']);
-  });
-
-  // eslint-disable-next-line max-len
-  it('should handle non-string and non-reversible elements without changes', () => {
-    expect(
-      arrayReverse([true, false, { key: 'value' }, ['array'], 123])
-    ).toEqual([true, false, { key: 'value' }, ['array'], 321]);
-  });
-
-  // eslint-disable-next-line max-len
-  it('should reverse elements with spaces while keeping spaces in the right positions', () => {
-    expect(
-      arrayReverse([' hello ', 'world'])
-    ).toEqual([' olleh ', 'dlrow']);
+  it(`should return the reverse array from the input array which
+  consist from string where are special char and num`, () => {
+    expect(arrayReverse(['p/d ? - 33,2%3!'])).toEqual(['!3%2,33 - ? d/p']);
   });
 });
