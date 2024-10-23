@@ -35,7 +35,7 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrLength).toEqual([]);
   });
 
-  it(`should not change length of strings in array after reverse`, () => {
+  it(`should return error message if there is no argument`, () => {
     expect(() => arrayReverse()).toThrow();
   });
 });
