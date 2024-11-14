@@ -8,12 +8,12 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return an array`, () => {
-
+    expect(Array.isArray(arrayReverse(['']))).toBe(true);
   });
 
   it(`should return an empty string
     if original array consists of an empty string`, () => {
-    expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
+    expect(arrayReverse([''])).toEqual(['']);
   });
 
   // write more tests here
