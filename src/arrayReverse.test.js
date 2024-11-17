@@ -7,20 +7,20 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse).toBeInstanceOf(Function);
   });
 
-  it(`should return an array of reversed worls`, () => {
+  it(`should return an array of reversed strings in reversed order`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  it(`should return an empty string
-    if original array consists of an empty string`, () => {
+  it(`should return an empty array
+    if original array is empty`, () => {
     expect(arrayReverse([])).toEqual([]);
   });
 
-  it(`should return an array of reversed worls including special symbols`, () => {
+  it(`should return an array of reversed strings and their order including special symbols`, () => {
     expect(arrayReverse(['&Mate', 'Academy'])).toEqual(['ymeda', 'cAetaM&']);
   });
 
-  it(`should return an array of reversed worls including special numbers`, () => {
+  it(`should return an array of reversed strings and their order including special numbers`, () => {
     expect(arrayReverse(['8Mate', 'Academy'])).toEqual(['ymeda', 'cAetaM8']);
   });
 
