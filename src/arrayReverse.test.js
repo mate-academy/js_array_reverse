@@ -16,5 +16,13 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  // write more tests here
+  it(`should return reversed each string in
+    the array witch correct number of characters`, () => {
+    expect(arrayReverse(['How', 'are', 'you?']))
+      .toEqual(['?uo', 'yer', 'awoH']);
+  });
+
+  it(`should return single reversed string`, () => {
+    expect(arrayReverse(['Mate'])).toEqual(['etaM']);
+  });
 });
