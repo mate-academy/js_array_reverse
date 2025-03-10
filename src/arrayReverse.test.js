@@ -11,10 +11,15 @@ describe(`Function 'arrayReverse':`, () => {
 
   });
 
-  it(`should return an empty string
-    if original array consists of an empty string`, () => {
+  it(`should return a reverse text`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  // write more tests here
+  it('should return a reversed word', () => {
+    expect(arrayReverse(['Hello'])).toEqual(['olleH']);
+  });
+
+  it('should return a reversed word', () => {
+    expect(arrayReverse(['Holla-Madrid'])).toEqual(['dirdaM-alloH']);
+  });
 });
