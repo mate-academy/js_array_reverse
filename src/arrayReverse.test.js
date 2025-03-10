@@ -7,14 +7,20 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse).toBeInstanceOf(Function);
   });
 
-  it(`should return an array`, () => {
-
+  it(`should return [' '] if arrayReverse = [' ']`, () => {
+    expect(arrayReverse([' '])).toEqual([' ']);
   });
 
-  it(`should return an empty string
-    if original array consists of an empty string`, () => {
+  it(`should return array with 2 strings 
+  if arrayReverse consist 2 strings`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  // write more tests here
+  it(`should return reserved array`, () => {
+    expect(arrayReverse(['Mate'])).toEqual(['etaM']);
+  });
+
+  it(`should return  array with the same lenght as arrayReverse`, () => {
+    expect(arrayReverse(['My', 'name', 'is', 'Alina'])).toEqual(['an', 'ilAs', 'ie', 'manyM']);
+  });
 });
