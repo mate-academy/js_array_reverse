@@ -6,6 +6,10 @@
  * @returns {string[]}
  */
 function arrayReverse(words) {
+  if (words.filter(word => typeof word !== 'string').length > 0) {
+    throw new Error(`Elements of 'words' array must be strings`);
+  }
+
   let start = 0;
   const whole = words.join('').split('').reverse().join('');
 
