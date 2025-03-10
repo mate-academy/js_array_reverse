@@ -1,20 +1,35 @@
 'use strict';
 
-describe(`Function 'arrayReverse':`, () => {
+describe('arrayReverse', () => {
   const arrayReverse = require('./arrayReverse');
 
-  it(`should be declared`, () => {
+  it('should be declared', () => {
     expect(arrayReverse).toBeInstanceOf(Function);
   });
 
+  it('hould reverse the order of the letters in each word in the array', () => {
+    const words = ['hello', 'world'];
+    const reversed = arrayReverse(words);
+
+    expect(reversed).toEqual(['dlrow', 'olleh']);
+  });
+
+  it(`should return an array with an empty 
+string if original array consists of an empty string`, () => {
+    const words = [''];
+    const reversed = arrayReverse(words);
+
+    expect(reversed).toEqual(['']);
+  });
+
   it(`should return an array`, () => {
-
+    expect(arrayReverse(['hello'])).toBeInstanceOf(Array);
   });
 
-  it(`should return an empty string
-    if original array consists of an empty string`, () => {
-    expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
-  });
+  it('should not modify each words length', () => {
+    const words = ['I', 'am', 'a', 'student!'];
+    const reversed = arrayReverse(words);
 
-  // write more tests here
+    expect(reversed).toEqual(['!', 'tn', 'e', 'dutsamaI']);
+  });
 });
