@@ -17,4 +17,4 @@ function arrayReverse(words) {
   return words;
 }
 
-module.exports = arrayReverse;
+module.exports = { arrayReverse };
