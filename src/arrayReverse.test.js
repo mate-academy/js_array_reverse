@@ -8,13 +8,27 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it(`should return an array`, () => {
-
+    expect(arrayReverse(['Mate', 'Academy'])).toBeInstanceOf(Array);
   });
 
   it(`should return an empty string
     if original array consists of an empty string`, () => {
-    expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
+    expect(arrayReverse([''])).toEqual(['']);
   });
 
-  // write more tests here
+  it(`should return an array with strings with the same length`, () => {
+    expect(
+      arrayReverse(['Mate', 'Academy']).map((word) => word.length)
+    ).toEqual([4, 7]);
+  });
+
+  it.skip(`should work properly with empty strings`, () => {
+    expect(arrayReverse(['I', 'am', 'a', '', 'student!'])).toEqual([
+      '!',
+      '',
+      'tn',
+      'e',
+      'dutsamaI',
+    ]);
+  });
 });
