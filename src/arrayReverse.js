@@ -1,5 +1,6 @@
 'use strict';
 
+/* eslint-disable no-console */
 /**
  * @param {string[]} words
  *
@@ -7,6 +8,7 @@
  */
 function arrayReverse(words) {
   let start = 0;
+
   const whole = words.join('').split('').reverse().join('');
 
   for (let i = 0; i < words.length; i++) {
