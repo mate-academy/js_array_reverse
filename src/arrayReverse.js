@@ -5,6 +5,7 @@
  *
  * @returns {string[]}
  */
+
 function arrayReverse(words) {
   let start = 0;
   const whole = words.join('').split('').reverse().join('');
