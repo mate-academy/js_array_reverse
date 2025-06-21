@@ -7,14 +7,19 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse).toBeInstanceOf(Function);
   });
 
-  it(`should return an array`, () => {
-
+  it(`an empty array`, () => {
+    expect(arrayReverse([])).toEqual([]);
   });
 
-  it(`should return an empty string
-    if original array consists of an empty string`, () => {
+  it(`one item`, () => {
+    expect(arrayReverse(['Hell0'])).toEqual(['0lleH']);
+  });
+
+  it(`several items`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  // write more tests here
+  it(`with empty strings`, () => {
+    expect(arrayReverse(['a', '', 'bc'])).toEqual(['c', '', 'ba']);
+  });
 });

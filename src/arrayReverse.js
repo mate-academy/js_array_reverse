@@ -1,5 +1,7 @@
 'use strict';
 
+// Implementation
+
 /**
  * @param {string[]} words
  *
