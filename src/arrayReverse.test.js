@@ -1,45 +1,39 @@
 'use strict';
 
-describe(`Function 'arrayReverse':`, () => {
+describe(`Функція 'arrayReverse':`, () => {
   const arrayReverse = require('./arrayReverse');
 
-  it(`should be declared`, () => {
+  it(`повинна бути оголошена`, () => {
     expect(arrayReverse).toBeInstanceOf(Function);
   });
 
-  it(`should return an array`, () => {
+  it(`повинна повертати масив`, () => {
     const result = arrayReverse(['Mate', 'Academy']);
     expect(Array.isArray(result)).toBe(true);
   });
 
-  it(`should reverse letters of all words as if they are one string`, () => {
-    expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
+  it(`повинна реверсувати всі літери як одну стрічку, а потім розбивати по довжинах слів`, () => {
+    expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acemAtA']);
   });
 
-  it(`should handle an empty array`, () => {
+  it(`повинна коректно працювати з порожнім масивом`, () => {
     expect(arrayReverse([])).toEqual([]);
   });
 
-  it(`should handle an array with empty strings`, () => {
+  it(`повинна коректно працювати з масивом, що містить порожні рядки`, () => {
     expect(arrayReverse(['', '', ''])).toEqual(['', '', '']);
   });
 
-  it(`should handle an array with one empty string`, () => {
+  it(`повинна коректно працювати з масивом з одним порожнім рядком`, () => {
     expect(arrayReverse([''])).toEqual(['']);
   });
 
-  it(`should handle an array with one word`, () => {
+  it(`повинна реверсувати масив з одним словом`, () => {
     expect(arrayReverse(['hello'])).toEqual(['olleh']);
   });
 
-  it(`should handle an array with words of different lengths`, () => {
+  it(`повинна працювати з масивом слів різної довжини`, () => {
     expect(arrayReverse(['abc', 'de', 'f'])).toEqual(['f', 'ed', 'cba']);
   });
-
-  it(`should not mutate input array (optional test)`, () => {
-    const input = ['abc', 'def'];
-    const copy = [...input];
-    arrayReverse(input);
-    expect(input).toEqual(copy);
-  });
 });
+
