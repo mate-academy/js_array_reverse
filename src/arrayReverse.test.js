@@ -10,10 +10,11 @@ describe('arrayReverse', () => {
 
   test('should reverse two words with different lengths', () => {
     expect(arrayReverse(['Mate', 'Academy']))
-      .toEqual(['ymed', 'acAetaM']);
+      .toEqual(['ymed', 'acAetaM']); // litera A mare e corectă!
   });
 
   test('should reverse array of many short strings', () => {
+    // "IamaStudent!" -> "!tnedutSamaI" -> ['!', 'tn', 'e', 'dutsamaI']
     expect(arrayReverse(['I', 'am', 'a', 'student!']))
       .toEqual(['!', 'tn', 'e', 'dutsamaI']);
   });
@@ -24,6 +25,10 @@ describe('arrayReverse', () => {
   });
 
   test('should reverse strings with special characters and numbers', () => {
+    // Input: ['12#$', 'abC!', 'D']
+    // Joined: '12#$abC!D'
+    // Reversed: 'D!Cba$#21'
+    // Split into lengths [4, 4, 1] => ['D!Cb', 'a$#2', '1']
     expect(arrayReverse(['12#$', 'abC!', 'D']))
       .toEqual(['D!Cb', 'a$#2', '1']);
   });
