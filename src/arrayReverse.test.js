@@ -7,14 +7,17 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse).toBeInstanceOf(Function);
   });
 
-  it(`should return an array`, () => {
-
-  });
-
   it(`should return an empty string
     if original array consists of an empty string`, () => {
+    expect(arrayReverse(['', ''])).toEqual(['', '']);
+  });
+
+  it('should reverse strings', () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  // write more tests here
+  it('should reverse strings with special symbols', () => {
+    expect(arrayReverse(['1', ' ', '2345', ' 6 ', '7']))
+      .toEqual(['7', ' ', '6 54', '32 ', '1']);
+  });
 });
