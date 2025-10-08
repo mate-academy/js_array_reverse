@@ -6,15 +6,22 @@
  * @returns {string[]}
  */
 function arrayReverse(words) {
-  let start = 0;
-  const whole = words.join('').split('').reverse().join('');
-
-  for (let i = 0; i < words.length; i++) {
-    words[i] = whole.slice(start, start + words[i].length);
-    start += words[i].length;
+  if (!Array.isArray(words)) {
+    return [];
   }
 
-  return words;
+  const all = words.join('').split('').reverse().join('');
+  const result = [];
+  let start = 0;
+
+  for (let i = 0; i < words.length; i++) {
+    const len = words[i].length;
+
+    result.push(all.slice(start, start + len));
+    start += len;
+  }
+
+  return result;
 }
 
 module.exports = arrayReverse;
