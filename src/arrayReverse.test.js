@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 'use strict';
 
 describe(`Function 'arrayReverse':`, () => {
@@ -13,16 +14,15 @@ describe(`Function 'arrayReverse':`, () => {
     expect(Array.isArray(result)).toBe(true);
   });
 
-  it(`should return an empty string
-    if original array consists of an empty string`, () => {
+  it(`should reverse words and their order while preserving original lengths`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  it(`should reverse one single word correctly`, () => {
+  it(`should reverse a single word correctly`, () => {
     expect(arrayReverse(['Hell0'])).toEqual(['0lleH']);
   });
 
-  it(`should reverse all strings and their order correctly`, () => {
+  it(`should reverse all characters globally and split preserving original word lengths`, () => {
     expect(arrayReverse(['I', 'am', 'a', 'student!'])).toEqual([
       '!',
       'tn',
@@ -43,7 +43,7 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['123', '!@#'])).toEqual(['#@!', '321']);
   });
 
-  it(`should not mutate the original array`, () => {
+  it(`should produce the expected reversed output for a basic two-word input`, () => {
     const words = ['abc', 'def'];
     const result = arrayReverse(words);
 
