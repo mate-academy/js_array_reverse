@@ -7,14 +7,17 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse).toBeInstanceOf(Function);
   });
 
-  it(`should return an array`, () => {
-
+  it(`should corectly handle number charts in array's element`, () => {
+    expect(arrayReverse(['Hell0'])).toEqual(['0lleH']);
   });
 
-  it(`should return an empty string
-    if original array consists of an empty string`, () => {
+  it(`should return an array with two not equal length elements`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  // write more tests here
+  it(`should return an array 
+    with more then two not equal length elements`, () => {
+    expect(arrayReverse(['I', 'am', 'a', 'student!']))
+      .toEqual(['!', 'tn', 'e', 'dutsamaI']);
+  });
 });
