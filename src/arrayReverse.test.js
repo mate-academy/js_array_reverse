@@ -7,8 +7,8 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse).toBeInstanceOf(Function);
   });
 
-  it(`should return an array with one element`, () => {
-    expect(arrayReverse(['Hello'])).toEqual(['olleH']);
+  it(`should corectly handle number charts in array's element`, () => {
+    expect(arrayReverse(['Hell0'])).toEqual(['0lleH']);
   });
 
   it(`should return an array with two not equal length elements`, () => {
