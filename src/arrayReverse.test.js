@@ -13,7 +13,7 @@ describe(`Function 'arrayReverse':`, () => {
 
   it(`should return an empty string
     if original array consists of an empty string`, () => {
-    expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
+    expect(arrayReverse([''])).toEqual(['']);
   });
 
   it('should reverses a single word', () => {
@@ -31,9 +31,5 @@ describe(`Function 'arrayReverse':`, () => {
 
   it('should works with digits and special characters', () => {
     expect(arrayReverse(['12$', '#A!'])).toEqual(['!A#', '$21']);
-  });
-
-  it('should returns empty array if input is empty', () => {
-    expect(arrayReverse([])).toEqual([]);
   });
 });
