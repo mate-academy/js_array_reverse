@@ -17,7 +17,7 @@ describe(`Function 'arrayReverse':`, () => {
   });
 
   it('should reverses a single word', () => {
-    expect(arrayReverse(['Hello'])).toEqual(['olleH']);
+    expect(arrayReverse(['Hell0'])).toEqual(['0lleH']);
   });
 
   it('should reverses two words and preserves their lengths', () => {
