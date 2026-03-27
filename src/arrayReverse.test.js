@@ -14,5 +14,5 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  // write more tests here
+  // some changes for checking Dmytro's github access
 });
