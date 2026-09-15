@@ -7,12 +7,40 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse).toBeInstanceOf(Function);
   });
 
-  it(`should return an array`, () => {});
+  it(`should return an array`, () => {
+    expect(arrayReverse(['Mate'])).toBeInstanceOf(Array);
+  });
 
-  it(`should return an empty string
-    if original array consists of an empty string`, () => {
+  it(`should return an empty array if the original array is empty`, () => {
+    expect(arrayReverse([])).toEqual([]);
+  });
+
+  it(`should return an empty string if the original array consists of one`, () => {
+    expect(arrayReverse([''])).toEqual(['']);
+  });
+
+  it(`should reverse a single string`, () => {
+    expect(arrayReverse(['Hell0'])).toEqual(['0lleH']);
+  });
+
+  it(`should reverse strings and their order`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  // write more tests here
+  it(`should preserve original string lengths when reversing`, () => {
+    expect(arrayReverse(['I', 'am', 'a', 'student!'])).toEqual([
+      '!',
+      'tn',
+      'e',
+      'dutsamaI',
+    ]);
+  });
+
+  it(`should reverse strings containing numbers and special symbols`, () => {
+    expect(arrayReverse(['abc', '12', '#$%'])).toEqual(['%$#', '21', 'cba']);
+  });
+
+  it(`should keep empty strings in their original positions`, () => {
+    expect(arrayReverse(['ab', '', 'Cde', ''])).toEqual(['ed', '', 'Cba', '']);
+  });
 });
