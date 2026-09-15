@@ -23,9 +23,11 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['Hell0'])).toEqual(['0lleH']);
   });
 
-  it(`should reverse all characters and keep the original string lengths`, () => {
+  it(`should reverse strings and their order`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
+  });
 
+  it(`should preserve original string lengths when reversing`, () => {
     expect(arrayReverse(['I', 'am', 'a', 'student!'])).toEqual([
       '!',
       'tn',
