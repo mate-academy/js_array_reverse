@@ -14,5 +14,18 @@ describe(`Function 'arrayReverse':`, () => {
     expect(arrayReverse(['Mate', 'Academy'])).toEqual(['ymed', 'acAetaM']);
   });
 
-  // write more tests here
+  test('reserves characters and preserves original length', () => {
+    const input = ['Mate', 'Academy'];
+    expect(arrayReverse(input)).toEqual(['ymed', 'acAetaM']);
+  });
+
+  test('reverses one string', () => {
+    const input = ['Hell0'];
+    expect(arrayReverse(input)).toEqual(['0lleH']);
+  });
+
+  test('reverses an empty string', () => {
+    const input = [''];
+    expect(arrayReverse(input)).toEqual(['']);
+  });
 });
